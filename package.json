@@ -4,6 +4,10 @@
   "private": true,
   "devDependencies": {
     "@types/jest": "^22.2.3",
+    "@types/node": "^10.1.3",
+    "@types/react": "^16.3.14",
+    "@types/react-native": "^0.55.16",
+    "@types/react-test-renderer": "^16.0.1",
     "jest-expo": "~27.0.0",
     "react-native-scripts": "1.14.0",
     "react-native-typescript-transformer": "^1.2.9",
@@ -20,7 +24,7 @@
     "test": "jest"
   },
   "jest": {
-  "preset": "jest-expo",
+    "preset": "jest-expo",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -38,11 +42,10 @@
     "cacheDirectory": ".jest/cache"
   },
   "dependencies": {
-    "@types/react": "^16.3.14",
-    "@types/react-native": "^0.55.16",
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
-    "tslib": "^1.9.1"
+    "tslib": "^1.9.1",
+    "typeorm": "file:../typeorm/build/package"
   }
 }
