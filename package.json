@@ -13,6 +13,7 @@
     "react-native-typescript-transformer": "^1.2.9",
     "react-test-renderer": "^16.3.1",
     "ts-jest": "^22.4.6",
+    "typeorm": "github:cuibonobo/typeorm-package",
     "typescript": "^2.8.3"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -45,7 +46,7 @@
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
-    "tslib": "^1.9.1",
-    "typeorm": "file:../typeorm/build/package"
+    "react-native-sqlite-storage": "^3.3.5",
+    "tslib": "^1.9.1"
   }
 }

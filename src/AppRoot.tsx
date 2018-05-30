@@ -86,7 +86,7 @@ export default class App extends Component<IAppProps, IAppState> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to the React Native Example for TypeORM!
+          Welcome to the Expo Example for TypeORM!
         </Text>
         <Text style={styles.small}>
           {this.state.progress}
