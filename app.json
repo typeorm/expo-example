@@ -1,10 +1,21 @@
 {
-    "expo": {
-        "sdkVersion": "27.0.0",
-        "packagerOpts": {
-            "sourceExts": ["ts", "tsx"],
-            "transformer": "node_modules/react-native-typescript-transformer/index.js"
-        }
-    }
+  "expo": {
+    "sdkVersion": "36.0.0",
+    "packagerOpts": {
+      "sourceExts": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    },
+    "name": "expo-example",
+    "slug": "expo-example",
+    "version": "0.1.0",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
 }
-
