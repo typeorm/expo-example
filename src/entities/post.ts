@@ -20,7 +20,7 @@ export class Post {
     @JoinTable()
     categories!: Category[];
 
-    @ManyToOne(type => Author, author => author.posts, {
+    @ManyToOne(type => Author, {
       cascade: ['insert']
     })
     author!: Author;

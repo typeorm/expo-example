@@ -8,8 +8,8 @@ import {
 
 import { createConnection, getRepository } from 'typeorm/browser';
 
-import { Author } from './entities/author';
 import { Category } from './entities/category';
+import { Author } from './entities/author';
 import { Post } from './entities/post';
 
 interface IAppProps {
