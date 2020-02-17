@@ -42,11 +42,12 @@
   },
   "dependencies": {
     "expo": "^36.0.0",
+    "expo-sqlite": "~8.0.0",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
-    "react-native-sqlite-storage": "^3.3.5",
+    "react-native-sqlite-storage": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "tslib": "^1.9.1",
-    "typeorm": "^0.2.20"
+    "typeorm": "github:cuibonobo/typeorm-package"
   }
 }

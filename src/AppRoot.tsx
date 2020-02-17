@@ -36,6 +36,7 @@ export default class App extends Component<IAppProps, IAppState> {
   connect() {
     return createConnection({
       database: "test",
+      driver: require('expo-sqlite'),
       entities: [
           Author,
           Category,
