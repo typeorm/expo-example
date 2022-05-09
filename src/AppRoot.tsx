@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-import { createConnection, getRepository } from 'typeorm/browser';
+import { DataSource} from 'typeorm/browser';
 
 import { Category } from './entities/category';
 import { Author } from './entities/author';
@@ -22,6 +22,19 @@ interface IAppState {
   savedPost: boolean
 }
 
+const dataSource = new DataSource({
+   database: "test19",
+      driver: require('expo-sqlite'),
+      entities: [
+         Category,
+          Author,
+          Post
+      ],
+      synchronize: true,
+      type: "expo",
+    
+})
+
 export default class App extends Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props);
@@ -34,21 +47,12 @@ export default class App extends Component<IAppProps, IAppState> {
   }
 
   connect() {
-    return createConnection({
-      database: "test",
-      driver: require('expo-sqlite'),
-      entities: [
-          Author,
-          Category,
-          Post
-      ],
-      synchronize: true,
-      type: "expo",
-    });
+    return dataSource.initialize()
   }
+ 
 
   async runDemo() {
-    await this.connect();
+   const source = await this.connect();
     
     const category1 = new Category();
     category1.name = "TypeScript";
@@ -65,7 +69,7 @@ export default class App extends Component<IAppProps, IAppState> {
     post.categories = [category1, category2];
     post.author = author;
 
-    const postRepository = getRepository(Post);
+    const postRepository = source.getRepository(Post);
     await postRepository.save(post);
 
     console.log("Post has been saved");
