@@ -14,13 +14,13 @@ export class Post {
     @Column("text")
     text!: string;
 
-    @ManyToMany(type => Category, {
+    @ManyToMany(() => Category, {
       cascade: ['insert']
     })
     @JoinTable()
     categories!: Category[];
 
-    @ManyToOne(type => Author, {
+    @ManyToOne(() => Author, {
       cascade: ['insert']
     })
     author!: Author;
